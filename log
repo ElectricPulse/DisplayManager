@@ -1,0 +1,58 @@
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:6:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstart_x_server[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+    6 |         [01;35m[Kstart_x_server[m[K(display, vt);
+      |         [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.c:6:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kvt[m[K’ undeclared (first use in this function)
+    6 |         start_x_server(display, [01;31m[Kvt[m[K);
+      |                                 [01;31m[K^~[m[K
+[01m[Kmain.c:6:33:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kmain.c:7:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Ksetenv[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+    7 |         [01;35m[Ksetenv[m[K("DISPLAY", display, true);
+      |         [01;35m[K^~~~~~[m[K
+[01m[Kmain.c:7:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrue[m[K’ undeclared (first use in this function)
+    7 |         setenv("DISPLAY", display, [01;31m[Ktrue[m[K);
+      |                                    [01;31m[K^~~~[m[K
+[01m[Kmain.c:1:1:[m[K [01;36m[Knote: [m[K‘[01m[Ktrue[m[K’ is defined in header ‘[01m[K<stdbool.h>[m[K’; did you forget to ‘[01m[K#include <stdbool.h>[m[K’?
+  +++ |+[32m[K#include <stdbool.h>[m[K
+    1 | int main (int argc, char **argv)
+[01m[Kgtk.c:55:5:[m[K [01;31m[Kerror: [m[Kconflicting types for ‘[01m[Kgtk_init[m[K’; have ‘[01m[Kint(int,  char **)[m[K’
+   55 | int [01;31m[Kgtk_init[m[K (int    argc,
+      |     [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/gtk-4.0/gtk/gtk.h:171[m[K,
+                 from [01m[Kgtk.c:1[m[K:
+[01m[K/usr/include/gtk-4.0/gtk/gtkmain.h:57:10:[m[K [01;36m[Knote: [m[Kprevious declaration of ‘[01m[Kgtk_init[m[K’ with type ‘[01m[Kvoid(void)[m[K’
+   57 | void     [01;36m[Kgtk_init[m[K                 (void);
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[Kx-server.c:1:8:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[Kpid_t[m[K’
+    1 | static [01;31m[Kpid_t[m[K x_server_pid;
+      |        [01;31m[K^~~~~[m[K
+[01m[Kx-server.c:[m[K In function ‘[01m[Kstart_x_server[m[K’:
+[01m[Kx-server.c:4:24:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kfork[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+    4 |         x_server_pid = [01;35m[Kfork[m[K();
+      |                        [01;35m[K^~~~[m[K
+[01m[Kx-server.c:7:17:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Ksnprintf[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+    7 |                 [01;35m[Ksnprintf[m[K(cmd, sizeof(cmd), "/usr/bin/X %s %s", display, virtual_terminal);
+      |                 [01;35m[K^~~~~~~~[m[K
+[01m[Kx-server.c:1:1:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdio.h>[m[K’ or provide a declaration of ‘[01m[Ksnprintf[m[K’
+  +++ |+[32m[K#include <stdio.h>[m[K
+    1 | static pid_t x_server_pid;
+[01m[Kx-server.c:7:17:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Ksnprintf[m[K’ [[01;35m[K-Wbuiltin-declaration-mismatch[m[K]
+    7 |                 [01;35m[Ksnprintf[m[K(cmd, sizeof(cmd), "/usr/bin/X %s %s", display, virtual_terminal);
+      |                 [01;35m[K^~~~~~~~[m[K
+[01m[Kx-server.c:7:17:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdio.h>[m[K’ or provide a declaration of ‘[01m[Ksnprintf[m[K’
+[01m[Kx-server.c:8:17:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kexecl[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+    8 |                 [01;35m[Kexecl[m[K("/bin/bash", "/bin/bash", "-c", cmd, NULL);
+      |                 [01;35m[K^~~~~[m[K
+[01m[Kx-server.c:8:17:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kexecl[m[K’ [[01;35m[K-Wbuiltin-declaration-mismatch[m[K]
+[01m[Kx-server.c:8:60:[m[K [01;31m[Kerror: [m[K‘[01m[KNULL[m[K’ undeclared (first use in this function)
+    8 |                 execl("/bin/bash", "/bin/bash", "-c", cmd, [01;31m[KNULL[m[K);
+      |                                                            [01;31m[K^~~~[m[K
+[01m[Kx-server.c:1:1:[m[K [01;36m[Knote: [m[K‘[01m[KNULL[m[K’ is defined in header ‘[01m[K<stddef.h>[m[K’; did you forget to ‘[01m[K#include <stddef.h>[m[K’?
+  +++ |+[32m[K#include <stddef.h>[m[K
+    1 | static pid_t x_server_pid;
+[01m[Kx-server.c:8:60:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+    8 |                 execl("/bin/bash", "/bin/bash", "-c", cmd, [01;36m[KNULL[m[K);
+      |                                                            [01;36m[K^~~~[m[K
+[01m[Kx-server.c:10:17:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Ksleep[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+   10 |                 [01;35m[Ksleep[m[K(1);
+      |                 [01;35m[K^~~~~[m[K
